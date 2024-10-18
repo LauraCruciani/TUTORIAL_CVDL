@@ -71,4 +71,26 @@ The layers in the model are:
 5. **Output Layer**: 10 units with softmax activation.
 
 
+# TUTORIAL 4 
+# CNN Classification using Transfer Learning (Xception)
+
+This script demonstrates the use of a pre-trained model, **Xception**, applied to the CIFAR-10 dataset through transfer learning. The goal is to solve a multiclass classification problem with 10 different classes.
+
+---
+
+## Preprocessing
+
+1. **Normalization**: The CIFAR-10 images (32x32) are normalized to a range between 0 and 1.
+2. **Standardization**: The dataset is standardized using the mean and standard deviation calculated from the training set.
+
+## Transfer Learning with Xception
+The model architecture is based on Xception pre-trained on ImageNet, with the following steps:
+
+1. **UpSampling2D**: Since CIFAR-10 images are smaller than ImageNet images (224x224), we upsample them to 224x224.
+2. **Pre-trained Xception**: The pre-trained Xception model is used as the feature extractor.
+3. **Fully Connected Layer**: A dense layer with 128 units is added.
+4. **Output Layer**: A softmax layer for 10-class classification.
+
+
+
 
